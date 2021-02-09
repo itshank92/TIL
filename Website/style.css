@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+
+
+body, html{
+  height: 100%;
+}
+
+header {
+
+  background-image: url('image/takoyaki-grill.jpg');
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat; /*바둑판배열이 아님*/
+  background-size: cover;  /*전체 container를 꽉채우도록 사이즈조정*/
+}
+
+.menu-1-button{
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  pointer-events: auto;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 10;
+}
+
+.button-circle{
+  border: 2px solid rgb(255, 238, 0);
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .media-logo{
+    width:140px;
+  }
+}
+
+.style_circle {
+  transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  border-radius: 50%;
+  border: 1px solid #000;
+  padding: 1px; }
+
+  header {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    pointer-events: none;
+    z-index: 20; }
+    header .menu_l_button {
+      width: 55px;
+      height: 55px;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      pointer-events: auto;
+      background-color: rgba(255, 255, 255, 0);
+      z-index: 10; }
+      header .menu_l_button hr {
+        transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+        -moz-transition-timing-function: ease-in-out;
+        -webkit-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+        width: 18px;
+        margin: 4px;
+        border: 1px solid #000; }
+    header .menu_l_button:hover hr:first-child {
+      -webkit-transform: translateX(3px);
+      -moz-transform: translateX(3px);
+      -ms-transform: translateX(3px);
+      -o-transform: translateX(3px);
+      transform: translateX(3px); }
+    header .menu_l_button:hover hr:last-child {
+      -webkit-transform: translateX(-3px);
+      -moz-transform: translateX(-3px);
+      -ms-transform: translateX(-3px);
+      -o-transform: translateX(-3px);
+      transform: translateX(-3px); }
+    header .menu_l_button:focus.active {
+      border: 1px solid #fff; }
+    header .menu_l_button.active {
+      border-color: #fff; }
+      header .menu_l_button.active hr,
+      header .menu_l_button.active > div {
+        border-color: #fff; }
+      header .menu_l_button.active hr:first-child {
+        -webkit-transform: rotate(-33deg);
+        -moz-transform: rotate(-33deg);
+        -ms-transform: rotate(-33deg);
+        -o-transform: rotate(-33deg);
+        transform: rotate(-33deg);
+        width: 20px; }
+      header .menu_l_button.active hr:last-child {
+        -webkit-transform: rotate(33deg);
+        -moz-transform: rotate(33deg);
+        -ms-transform: rotate(33deg);
+        -o-transform: rotate(33deg);
+        transform: rotate(33deg);
+        width: 20px; }
+    header .button_top {
+      display: none;
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+      pointer-events: auto; }
+      header .button_top .back_circle {
+        background-image: url(../images/icon_back_w.svg);
+        background-color: #DEA56A;
+        border-color: #DEA56A; }
