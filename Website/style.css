@@ -9,37 +9,120 @@ header {
 
   background-image: url('image/takoyaki-grill.jpg');
   /* Full height */
-  height: 100%;
+  height: 100vh;
+  width:100%;
+  position: relative;
+  z-index: 20;
 
   /* Center and scale the image nicely */
   background-position: center;
-  background-repeat: no-repeat; /*바둑판배열이 아님*/
-  background-size: cover;  /*전체 container를 꽉채우도록 사이즈조정*/
+  background-repeat: no-repeat;   /*바둑판배열이 아님*/
+  background-size: cover;  /*전체 container를 꽉채우도록 사이즈조정 */
+
 }
 
-.menu-1-button{
-  width: 55px;
-  height: 55px;
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  pointer-events: auto;
-  background-color: rgba(255, 255, 255, 0);
-  z-index: 10;
-}
+
 
 .button-circle{
   border: 2px solid rgb(255, 238, 0);
   border-radius: 50%;
 }
 
-@media screen and (max-width: 768px) {
-  .media-logo{
-    width:140px;
-  }
+
+.media-logo{
+  height:75%;
 }
 
-.style_circle {
+
+.index_container {
+  padding-bottom: 100px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  background-color: #F3F3F3; }
+
+
+footer {
+  width: 100%;
+  height: 260px;
+  position: relative;
+  padding-bottom: 25px;
+  /* background-image: url('image/pattern.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center; */
+ }
+
+
+
+.footer_wrap {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1; }
+
+
+.footer_text p {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 25px;
+  margin-bottom: 0; }
+.footer_text > img {
+  position: relative;
+  width: 188px;
+  height: 75px;
+  display: inline-block;
+  margin-bottom: 0; }
+
+
+.footer_brand {
+  width: 520px;
+  padding-bottom: 0; }
+  .footer_brand > img {
+    /* width: 85px;
+    height: 85px; */
+    position: relative;
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+     }
+
+@media screen and (max-width:440px) {
+  .footer_brand > img{
+    width: 60px;
+    height: 60px;
+}
+  .footer_text_p{
+    padding:0px;
+  }
+  .footer_text p {
+    font-size: 11px;
+}
+}
+
+.footer_bg {
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+right: 0;
+background-image: url('image/pattern.png');
+-webkit-background-size: contain;
+-moz-background-size: contain;
+background-size:cover;
+background-repeat: no-repeat;
+background-position: bottom center; }
+    
+.footer_bg_gray {
+  background-color: #F3F3F3; }
+
+
+
+
+/* .style_circle {
   transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
@@ -51,8 +134,34 @@ header {
   border-radius: 50%;
   border: 1px solid #000;
   padding: 1px; }
+  .style_circle > div {
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; } */
 
-  header {
+  /* header {
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -124,4 +233,4 @@ header {
       header .button_top .back_circle {
         background-image: url(../images/icon_back_w.svg);
         background-color: #DEA56A;
-        border-color: #DEA56A; }
+        border-color: #DEA56A; } */
