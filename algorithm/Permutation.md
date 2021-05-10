@@ -226,6 +226,7 @@ def swap_perm(idx):
         return arr
     
     #3 ★현재 바꾸는 순열 자리포함 이후의 요소에 대해서만 스왑진행
+    # "내자리에 오고싶은 애들 한번씩 와서 앉아봐!!"
     for j in range(idx,n):
         arr[idx],arr[j] = arr[j],arr[idx]
         swap_perm(idx+1)

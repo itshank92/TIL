@@ -104,3 +104,110 @@ def mergeSort(arr):
   * 병합정렬은 쪼개진 덩어리를 하나의 arr로 보고 각 arr은 인덱스 0부터 시작한다.
 * **#5**
   * 작은것부터 앞에서 넣어준다.
+
+
+
+
+
+## 병합정렬 다른 코드
+
+제자리 정렬은 아니지만 직관적으로 이해가 되는 코드
+
+아직까지 병합정렬이 쪼갠 arr에 대해서 쪼갠 arr의 인덱스로 arr를 바꾸는 것이 이해가 안된다. 
+
+그래서 일단 이렇게 직관적으로 구현했다.
+
+
+
+나누는 함수와, 병합하는 함수를 각각 구현했다.
+
+```python
+# 병합하는 함수
+def merge(left,right):
+  result = []
+  lp = rp = p = 0
+  while lp < len(left) and rp < len(right):
+    if left[lp] < right[rp]:
+      result.append(left[lp])
+      lp += 1
+    else:
+      result.append(right[rp])
+      rp += 1
+  
+  if lp < len(left):
+    result.extend(left[lp:])
+  if rp < len(right):
+    result.extend(right[rp:])
+
+  return result
+    
+
+# 나누는 함수
+def mergesort(arr):
+  if len(arr) > 1:
+    left = mergesort(arr[:len(arr)//2])
+    right = mergesort(arr[len(arr)//2:])
+    return merge(left,right)
+  return arr
+
+
+temp = [10,40,2,3,40,666,52,88,12,96,5,9,11,86,1852,74,115,35]
+
+temp = mergesort(temp)
+temp
+
+```
+
+
+
+
+
+---
+
+​       
+
+# 병합정렬 이해하기
+
+```python
+def mergesort(arr):
+  if len(arr) > 1:
+    mid = len(arr)//2
+    left = arr[:mid]
+    right = arr[mid:]
+    mergesort(left)
+    mergesort(right)
+    print("-------------------------")
+    print(f" ■ arr = {arr}")
+    print(f" ■ left = {left}")
+    print(f" ■ right = {right}")
+    print(f" ■ left + rifht = {left + right}")
+    print("-------------------------")
+    arr[0] = "♣"
+
+arr = [1,2,3,4]
+mergesort(arr)
+
+"""
+<결과값>
+-------------------------
+ ■ arr = [1, 2]
+ ■ left = [1]
+ ■ right = [2]
+ ■ left + rifht = [1, 2]
+-------------------------
+-------------------------
+ ■ arr = [3, 4]
+ ■ left = [3]
+ ■ right = [4]
+ ■ left + rifht = [3, 4]
+-------------------------
+-------------------------
+ ■ arr = [1, 2, 3, 4]
+ ■ left = ['♣', 2]
+ ■ right = ['♣', 4]
+ ■ left + rifht = ['♣', 2, '♣', 4]
+-------------------------
+
+"""
+```
+

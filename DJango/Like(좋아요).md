@@ -105,3 +105,31 @@ def likes(request,article_pk):
 <p> {{ article.like_users.all|length }}명이 이 글을 좋아합니다.  </p>
 ```
 
+
+
+---
+
+
+
+### 소스 모델과 타겟 모델 (Source Model & Target Model)
+
+두 모델이 관계를 맺고 있을 때, ForeignKey를 가진쪽이 Source Model이라고 불리고 ForeignKey가 없는 쪽이 Target Model이라고 불린다.
+
+
+
+> (기타) 윈도우에서 이모지 사용 단축키
+
+`.`  + `window키`
+
+
+
+---
+
+무엇인가를 막아야 하는 일은 크게 두가지로 수행된다.
+
+프론트 페이지에서 막는 것 → template에서 수정
+
+백엔드에서 막는 것 → views에서 수정
+
+
+
