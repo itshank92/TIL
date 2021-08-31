@@ -1,0 +1,41 @@
+python에서 csv 읽고 쓰기(내장 라이브러리 사용)
+https://devpouch.tistory.com/55
+https://stackoverflow.com/questions/26028555/how-to-create-a-csv-file-in-python-and-export-put-it-to-some-local-directory
+
+
+파이참 콘솔에서 한글, 영어 깨지는 문제 해결 방법
+https://martinii.fun/entry/Pycharm-Python-Console%EC%97%90%EC%84%9C-%ED%95%9C%EA%B8%80%EA%B9%A8%EC%A7%90-%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95
+>> 이 방법으로 해결 안되면
+import os하고 os.system("chcp 65001")을 해주면 된다.
+>>https://devji.tistory.com/entry/PyCharm%EC%9D%98-Python-console%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%BD%98%EC%86%94-%ED%95%9C%EA%B8%80-%EA%B9%A8%EC%A7%90-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0
+
+taskkill 사용법
+plink.exe를 사용한 배치파일을 모두 종료하려면
+/im 옵션을 사용하고 그 값으로 plink.exe를 주면 모든 배치 파일을 종료할 수 있다.
+https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/taskkill#examples
+https://m.blog.naver.com/navjhj88/221652193773
+
+배치 파일 작성시 call 과 start
+call은 순차적으로 실행시키는 것이고(동기)
+start는 동시에 실행시키는 것이다(비동기)
+난 속도가 빠른 비동기 방식(start)을 사용했다.
+https://supercoding.tistory.com/11
+
+plink 실행시 명령어가 적힌 txt 파일을 옵션값으로 주는 방법에는 
+-m과 <이 존재한다.
+-m의 경우 txt 파일의 하나의 명령어만 읽어올 수 있다.
+<의 경우 txt파일의 여러 명령어를 읽어올 수 있다. 
+https://serverfault.com/questions/877532/sending-keystrokes-using-plink
+
+배치파일에서 대기시간 주는 방법 (timeout)
+https://ko.wikihow.com/%EB%B0%B0%EC%B9%98-%ED%8C%8C%EC%9D%BC-%EC%A7%80%EC%97%B0%ED%95%98%EB%8A%94-%EB%B2%95
+>> 위 링크에서 6번 항복에 설명이 있다.
+
+
+배치파일 실행 결과를 txt 파일에 저장하는 방법 (>사용)
+https://mhilt767.tistory.com/entry/CMD%EC%BB%A4%EB%A7%A8%EB%93%9C-%EC%B6%9C%EB%A0%A5%EC%9D%84-%ED%8C%8C%EC%9D%BC%EB%A1%9C-%EC%A0%80%EC%9E%A5-Save-the-output-of-a-command-to-a-file
+
+
+기타
+batch 파일을 닫는 명령어는 exit이다.
+plink를 닫는 명령어는 logout과 exit가 존재한다.

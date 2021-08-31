@@ -1,0 +1,8 @@
+[ 같은 파일(commands.txt)이 두 개가 있는 이유 ]
+
+final.bat으로 실행시키는 bat 파일들은 final.bat의 위치를 기준으로 파일들을 인식한다.
+따라서 각 bat 파일들이 읽어오는 commands.txt는 final.bat 파일과 
+같은 층위에 있는 commands.txt 파일이다.
+(하지만 만약의 경우를 대비해서 동일한 이름의 파일을 bat 파일들이 
+들어있는 batches 디렉토리에도 넣어두었다)
+
